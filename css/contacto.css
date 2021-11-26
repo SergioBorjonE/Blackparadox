@@ -1,0 +1,229 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* body{
+    overflow-y: hidden;
+} */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  position: fixed;
+  z-index: 100;
+}
+nav:hover {
+  background-color: white;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(6, 10, 15, 0.1);
+}
+nav:hover img {
+  align-items: center;
+  width: 170px;
+}
+nav:hover ul li a {
+  color: rgba(73, 73, 73, 0.5);
+}
+nav img {
+  align-items: center;
+  max-width: 150px;
+  height: 75px;
+}
+nav ul {
+  display: inline-block;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul .link-active a {
+  color: #060a0f !important;
+  text-transform: uppercase;
+}
+nav ul .link-active a::before {
+  width: 100%;
+  background-color: #060a0f;
+}
+nav ul .link-active a::after {
+  background-color: #060a0f;
+  width: 0%;
+}
+nav ul li {
+  background-color: none;
+  display: inline-block;
+  margin: 0px 10px;
+}
+nav ul li a {
+  color: #060a0f;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+}
+nav ul li a::before {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0px;
+  background-color: transparent;
+  justify-content: center;
+}
+nav ul li a::after {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  justify-content: center;
+  transition: all 0.3s;
+}
+nav ul li a:hover {
+  color: rgba(73, 73, 73, 0.5);
+  text-decoration: none;
+}
+nav ul li a:hover::before {
+  width: 0%;
+  background-color: rgba(73, 73, 73, 0.5);
+}
+nav ul li a:hover::after {
+  width: 100%;
+  background-color: rgba(73, 73, 73, 0.5);
+}
+
+.tslow, .copy a, .tumblr, nav img, nav ul .link-active a::before, nav ul .link-active a::after, nav ul li a, nav ul li a::before, nav ul li a::after {
+  transition: all 0.3s ease-in;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 60px;
+  color: #060a0f;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.nav-overlay {
+  background-color: white;
+  padding: 10px 0px;
+  border: 1px solid rgba(6, 10, 15, 0.1);
+}
+.nav-overlay img {
+  align-items: center;
+  width: 170px;
+}
+.nav-overlay ul li a {
+  color: rgba(73, 73, 73, 0.5);
+}
+
+footer {
+  margin-top: 60px;
+  width: 100%;
+  background-color: #060a0f;
+  padding: 70px 0px;
+  clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+}
+footer p {
+  margin: 0px;
+  padding: 0px;
+}
+footer strong {
+  color: rgba(255, 255, 255, 0.4);
+}
+footer ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+footer ul li {
+  padding: 0px;
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.2);
+}
+footer a {
+  opacity: 0.5;
+  color: #ff6600;
+}
+footer hr {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tumblr {
+  position: relative;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 20%;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.tumblr:hover {
+  opacity: 1;
+}
+
+.copy {
+  padding: 10px 0px;
+  background-color: #070c13;
+  text-align: left;
+}
+.copy p, .copy a {
+  margin: 0px;
+  padding: 0px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.copy a {
+  opacity: 0.5;
+  color: #ff6600;
+}
+.copy a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.social-networks li {
+  display: inline-block;
+}
+
+#mapa-contacto {
+  margin-top: 120px;
+  width: 100%;
+}
+#mapa-contacto .anc70 {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+#mapa-contacto .anc30 {
+  margin: 0;
+  width: 30%;
+  padding: 0;
+}
+#mapa-contacto div {
+  padding-top: 5px;
+}
+#mapa-contacto div #formulario {
+  padding: 120px 10px;
+}
+#mapa-contacto div #formulario .input {
+  width: 85%;
+  margin: 0 auto;
+  margin: 0.5rem;
+}
+#mapa-contacto div #formulario .button {
+  background-color: #060a0f;
+  height: 45px;
+  border: none;
+  width: 50%;
+  color: white;
+}
+#mapa-contacto div #formulario .button:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+/*# sourceMappingURL=contacto.css.map */

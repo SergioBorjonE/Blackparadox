@@ -1,0 +1,136 @@
+html,
+body {
+  overflow-x: hidden;
+}
+/* body{
+    overflow-y: hidden;
+} */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  position: fixed;
+  z-index: 100;
+  &:hover {
+    background-color: white;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparentize($base, 0.9);
+    img {
+      align-items: center;
+      width: 170px;
+    }
+    ul {
+      li {
+        a {
+          color: $text;
+        }
+      }
+    }
+  }
+  img {
+    align-items: center;
+    max-width: 150px;
+    height: 75px;
+    @extend.tslow;
+  }
+  ul {
+    display: inline-block;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .link-active {
+      a {
+        color: $base !important;
+        text-transform: uppercase;
+        &::before {
+          width: 100%;
+          background-color: $base;
+          @extend .tslow;
+        }
+        &::after {
+          background-color: $base;
+          width: 0%;
+          @extend .tslow;
+        }
+      }
+    }
+    li {
+      background-color: none;
+      display: inline-block;
+      margin: 0px 10px;
+      a {
+        color: $base;
+        font-size: 16px;
+        text-transform: uppercase;
+        position: relative;
+        @extend .tslow;
+        &::before {
+          content: " ";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          bottom: 0px;
+          background-color: transparent;
+          justify-content: center;
+          @extend .tslow;
+        }
+        &::after {
+          content: " ";
+          position: absolute;
+          height: 2px;
+          width: 0%;
+          top: 0;
+          left: 0;
+          background-color: transparent;
+          justify-content: center;
+          transition: all 0.3s;
+          @extend .tslow;
+        }
+        &:hover {
+          color: $text;
+          text-decoration: none;
+          &::before {
+            width: 0%;
+            background-color: $text;
+          }
+          &::after {
+            width: 100%;
+            background-color: $text;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tslow {
+  transition: all 0.3s ease-in;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 60px;
+  color: $base;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.nav-overlay {
+  background-color: white;
+  padding: 10px 0px;
+  border: 1px solid transparentize($base, 0.9);
+  img {
+    align-items: center;
+    width: 170px;
+  }
+  ul {
+    li {
+      a {
+        color: $text;
+      }
+    }
+  }
+}

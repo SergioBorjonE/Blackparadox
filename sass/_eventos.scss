@@ -1,0 +1,42 @@
+#eventos{
+    h3{
+        margin-top: 15vh; 
+        margin-bottom: 5vh;
+    }
+    div{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 35px; 
+        position: relative;  
+        img{
+            display: block  ;
+            width: 80%;
+            margin: 0 auto;
+            rotate: 90deg;
+        }
+        button{
+            width: 35%;
+            border: 1px solid $base;
+            background-color: transparent;
+            font-size: 16px;
+            padding: 10px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            &:hover{
+                background-color: $base;
+                border: 1px solid $base;
+                color: white; 
+            }
+        }
+        .rounded-circle{
+            width: 80%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            @extend .tslow;
+            &:hover{
+                clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+            }
+        }
+        
+    }
+
+}

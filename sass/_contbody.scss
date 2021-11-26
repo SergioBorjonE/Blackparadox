@@ -1,0 +1,37 @@
+#mapa-contacto{
+    margin-top: 120px;
+    width: 100%;
+    .anc70{
+        width: 70%;
+        margin: 0;
+        padding: 0;
+    }
+    .anc30{
+        margin: 0;
+        width: 30%;
+        padding: 0;
+    }
+    div{
+        padding-top: 5px;
+        #formulario{
+            padding: 120px 10px;
+            .input{
+                width: 85%;
+                margin:0 auto;
+                margin: 0.5rem;
+            }
+            .button{
+                background-color: $base;
+                height: 45px;
+                border: none;
+                width: 50%;
+                color:white;
+                &:hover{
+                    background-color: $outline;
+                    color:white;
+    
+                }
+            }
+        }
+    }
+}

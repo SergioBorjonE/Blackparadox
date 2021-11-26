@@ -1,0 +1,73 @@
+footer{
+    margin-top: 60px;
+    width: 100%;
+    background-color: $base;
+    padding:70px 0px;
+    clip-path:polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+    p{
+        margin: 0px;
+        padding: 0px;
+    }
+    strong{
+        color: transparentize(white, 0.6);
+    }
+    ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        li{
+            padding: 0px;
+            margin: 0px;
+            color: transparentize(white, 0.8);
+        }
+    }
+    a{
+        opacity:.5;
+        color:$outline;
+    }
+    hr{
+        border-radius: 10px;
+        background-color: transparentize(white,.92);
+    }
+
+}
+
+.tumblr{
+    position: relative;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    cursor: pointer;
+    opacity: .7;
+    @extend .tslow;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.copy{
+    padding: 10px 0px;
+    background-color: lighten($base, 1);
+    text-align: left;
+    p, a{
+        margin: 0px;
+        padding: 0px;
+        color: transparentize(white, .7)
+    }
+    a{
+        opacity: .5;
+        color:$outline;
+        @extend .tslow;
+        &:hover{
+            opacity: 1;
+            text-decoration: none;
+        }
+    }
+}
+
+.social-networks{
+    li{
+        display: inline-block;
+    }
+}

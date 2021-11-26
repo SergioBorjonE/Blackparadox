@@ -1,0 +1,99 @@
+#slider {
+  backface-visibility: hidden;
+  clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
+  z-index: -1;
+}
+
+#slippry {
+  z-index: 2;
+  background-color: transparent;
+  position: relative;
+  .text-btn {
+    position: absolute;
+    width: 350px;
+  }
+  .white_bg {
+    background-color: transparentize(white, 0.2);
+    padding: 5px 10 px;
+  }
+  @mixin posl($horizontal, $vertical) {
+    left: $horizontal;
+    top: $vertical;
+  }
+
+  @mixin posr($horizontal, $vertical) {
+    right: $horizontal;
+    top: $vertical;
+  }
+
+  .aliz {
+    @include posl(15%, 30%);
+  }
+
+  .alde {
+    @include posr(15%, 30%);
+  }
+
+  button {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid $base;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    color: $base;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    @extend .tslow;
+    &:hover {
+      opacity: 1;
+      background-color: $base;
+      color: white;
+    }
+  }
+  .black {
+    background-color: $base;
+    opacity: 1;
+    color: white;
+    &:hover {
+      background-color: $outline;
+      border: 1px solid $outline;
+    }
+  }
+}
+
+.diamante {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 1;
+  background-image: url(../images/square_01.jpg);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @extend .rombo;
+}
+
+.rombo {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  @extend .tslow;
+  &:hover {
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  }
+}
+
+.sp-button {
+  border: 1px solid $base;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $base;
+    border: 1px solid $base;
+    color: white;
+  }
+}
